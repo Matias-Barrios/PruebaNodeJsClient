@@ -1,1 +1,2 @@
 export const UPDATE_RESPONSE = "UPDATE_RESPONSE";
+export const UPDATE_FAILURE = "UPDATE_FAILURE";

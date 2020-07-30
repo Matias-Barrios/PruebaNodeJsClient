@@ -1,25 +1,21 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
 
-export default class ResponseArea extends Component {
-    constructor(props) {
-        super(props);
-        
-    }
-
-    mapStateToProps = state => {
-        return { response: state.articles };
-    };
-
+class ResponseArea extends Component {
     render() {
+        console.log("rendering!!")
         return (
             <div className="container">
                 <div className="row app_responsearea">
-                    <p>{this.props}</p>
+                    <p>{this.props.response}</p>
                 </div>
             </div>
         )
     }
 }
 
+const mapStateToProps = state => ({
+    response : state.response
+});
 
+export default connect(mapStateToProps,null)(ResponseArea)

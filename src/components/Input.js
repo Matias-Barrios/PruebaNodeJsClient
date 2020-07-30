@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import { connect } from "react-redux";
+import { updateResponse } from "../actions/index";
 
-export default class Input extends Component {
+
+class Input extends Component {
 
     constructor(props) {
         super(props);
@@ -8,21 +11,8 @@ export default class Input extends Component {
     }
 
     onSubmit(e) {
-        console.log("click")
-        fetch('https://jsonplaceholder.typicode.com/users', {
-            method: 'post',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: '{}'
-        }).then(function(response) {
-            return response.json();
-        }).then(function(data) {
-            console.log(data) 
-        }).catch(function(err){ 
-            console.log(err) 
-        });
+       console.log("caca");
+       this.props.updateResponse("papas")
     }
     render() {
         return (
@@ -41,6 +31,9 @@ export default class Input extends Component {
         )
     }
 }
+
+
+export default connect(null,{ updateResponse })(Input)
 
 
 

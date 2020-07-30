@@ -1,4 +1,4 @@
-import { UPDATE_RESPONSE } from "../constants/action-types";
+import { UPDATE_RESPONSE, UPDATE_FAILURE } from "../constants/action-types";
 
 const initialState = {
   response: ''
@@ -6,7 +6,16 @@ const initialState = {
 
 function rootReducer(state = initialState, action) {
   if (action.type === UPDATE_RESPONSE) {
-    state.response = action.payload;
+    return {
+      ...state,
+      response : action.payload
+    }
+  }
+  if (action.type === UPDATE_FAILURE) {
+    return {
+      ...state,
+      response : action.payload
+    }
   }
   return state;
 }
