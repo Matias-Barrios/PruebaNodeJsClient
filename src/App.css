@@ -1,3 +1,8 @@
+body{
+  text-align: center;
+  margin: auto;
+  padding: auto;
+}
 .App {
   text-align: center;
 }
@@ -14,7 +19,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #f3f7fe;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,11 +33,48 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header_image {
+   max-width: 10%;
+   display: flex;
+}
+
+.app_header{
+  text-align: center;
+  display: inline-block;
+}
+
+.header_title {
+   max-width: 80%;
+   display: inline-block;
+}
+
+.app_input {
+  background-color: rgb(90, 185, 249);
+  text-align: center;
+  display: inline-block;
+  width: 90%;
+  margin: 1%;
+  padding: 1%;
+}
+
+.app_label{
+  color: white;
+  font-size: large;
+  font-weight: bolder;
+  margin: 1%;
+  padding: 1%;
+}
+
+.app_btn {
+  width: 90%;
+  font-weight: bolder !important;
+  font-size: large !important;
+}
+
+.app_responsearea{
+  width: 90%;
+  background-color: rgb(233, 220, 116);
+  font-weight: bolder !important;
+  font-size: large !important;
+  color: rgb(124, 124, 124);
 }
