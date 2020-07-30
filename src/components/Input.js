@@ -2,8 +2,27 @@ import React, { Component } from 'react'
 
 export default class Input extends Component {
 
+    constructor(props) {
+        super(props);
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+
     onSubmit(e) {
-        
+        console.log("click")
+        fetch('https://jsonplaceholder.typicode.com/users', {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: '{}'
+        }).then(function(response) {
+            return response.json();
+        }).then(function(data) {
+            console.log(data) 
+        }).catch(function(err){ 
+            console.log(err) 
+        });
     }
     render() {
         return (
@@ -14,7 +33,10 @@ export default class Input extends Component {
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
                 </div>
-                <button type="button" class="btn btn-success app_btn">Submit 'em cowboy!</button>
+                <button 
+                type="button" 
+                className="btn btn-success app_btn"
+                onClick={this.onSubmit}>Submit 'em cowboy!</button>
             </div>
         )
     }
