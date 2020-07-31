@@ -10,7 +10,7 @@ import store from './store'
 function App() {
   return (
     <Provider store={store}>
-    <div className="App">
+    <div className="container App">
         <Header>
         </Header>
         <Input>

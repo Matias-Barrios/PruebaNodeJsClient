@@ -9,7 +9,7 @@ export default class Header extends Component {
 
     render() {
         return (
-            <div className="container app_header">
+            <div className="app_header">
                 <div className="row">
                     <img className="header_image" src={header_image} />
                     <img className="header_title" src={header_title} />

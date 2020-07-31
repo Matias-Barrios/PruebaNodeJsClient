@@ -39,6 +39,7 @@ body{
 }
 
 .app_header{
+  margin: auto;
   text-align: center;
   display: inline-block;
 }
@@ -52,7 +53,6 @@ body{
   background-color: rgb(90, 185, 249);
   text-align: center;
   display: inline-block;
-  width: 90%;
   margin: 1%;
   padding: 1%;
 }
@@ -66,14 +66,22 @@ body{
 }
 
 .app_btn {
-  width: 90%;
+  margin: auto;
   font-weight: bolder !important;
   font-size: large !important;
 }
 
 .app_responsearea{
-  width: 90%;
+  margin: 2%;
+  padding: 2%;
+  min-height: 40px;
   background-color: rgb(233, 220, 116);
+}
+
+.app_responsetextarea {
+  margin: auto;
+  width: 95%;
+  padding: 1%;
   font-weight: bolder !important;
   font-size: large !important;
   color: rgb(124, 124, 124);

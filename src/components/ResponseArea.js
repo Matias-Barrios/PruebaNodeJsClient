@@ -3,13 +3,10 @@ import { connect } from "react-redux";
 
 class ResponseArea extends Component {
     render() {
-        console.log("rendering!!")
         return (
-            <div className="container">
                 <div className="row app_responsearea">
-                    <p>{this.props.response}</p>
+                    <textarea className="app_responsetextarea" disabled value={this.props.response}> </textarea>
                 </div>
-            </div>
         )
     }
 }
