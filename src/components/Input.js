@@ -24,15 +24,10 @@ class Input extends Component {
     }
     render() {
         return (
-                <div className="row">
-                    <div className="form-group app_input">
-                        <label className="app_label">Please input a text and be ready to be amazed by the power of receiving it back!!</label>
-                        <textarea className="form-control" onChange={this.updateData}></textarea>
-                    </div>
-                    <button 
-                        type="button" 
-                        className="btn btn-success app_btn"
-                        onClick={this.onSubmit}>Submit 'em cowboy!</button>
+                <div className="row app_input">
+                        <label id="mainLabel" className="app_label">Please input a text and be ready to be amazed by the power of receiving it back!!</label>
+                        <textarea value={this.state.data} className="form-control" onChange={this.updateData} />
+                        <p><button id="submit_button" type="button" className="btn btn-success app_btn" onClick={this.onSubmit}>Let's Go</button></p>
                 </div>
         )
     }

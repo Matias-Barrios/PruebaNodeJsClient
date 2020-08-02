@@ -5,7 +5,7 @@ class ResponseArea extends Component {
     render() {
         return (
                 <div className="row app_responsearea">
-                    <textarea className="app_responsetextarea" disabled value={this.props.response}> </textarea>
+                    <textarea id="responsetextarea" className="app_responsetextarea" disabled value={this.props.response} />
                 </div>
         )
     }

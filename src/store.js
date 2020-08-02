@@ -3,7 +3,9 @@ import rootReducer from "./reducers/index";
 import thunk from 'redux-thunk';
 
 
-const initialState = {}
+const initialState = {
+    response : ''
+}
 
 const middleware = [thunk]
 

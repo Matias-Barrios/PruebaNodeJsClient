@@ -11,8 +11,8 @@ export default class Header extends Component {
         return (
             <div className="app_header">
                 <div className="row">
-                    <img className="header_image" src={header_image} />
-                    <img className="header_title" src={header_title} />
+                    <img id="logo" className="header_image" src={header_image} />
+                    <img id="app_title" className="header_title" src={header_title} />
                 </div>
             </div>
         )
